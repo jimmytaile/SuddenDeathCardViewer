@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <!-- Title -->
+  <title>Sudden Death Card Viewer</title>
+  <link rel="icon" href="images/websiteResources/website-icon.png">
+  <!-- Custom Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Syne+Mono&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="container mt-3 mb-4 text-center" id="title-section">
+    <h1 class="SDTitleBox">Sudden Death Card Viewer</h1>
+  </header>
+
+  <!-- Card Showcase -->
+  <section class="container mb-5 text-center" id="card-showcase-section">
+    <!-- Display Card -->
+    <img src="images/cardBacks/default-back.png" id="display-card" alt="Display Card" onclick="randomCard()">
+    <!-- Card Buttons -->
+    <div class="container mt-3" id="card-buttons">
+      <button id="previous-card-button" type="button" onclick="prevCard()">◀</button>
+      <button id="random-card-button" type="button" onclick="randomCard()">Random</button>
+      <button id="next-card-button" type="button" onclick="nextCard()">▶</button>
+    </div>
+  </section>
+
+  <!-- Complete Card List -->
+  <section class="container text-center" id="complete-card-list-section">
+    <div class="container mb-4">
+      <h2 class="SDTextBox">Complete Card List</h2>
+    </div>
+
+    <!-- Card Search -->
+    <div class="mb-3" id="card-search">
+      <p id="search-text">Card Search: </p>
+      <input id="search-input" type="text" oninput="searchCard()">
+      <button class="mt-3" id="hide-button" type="button" onclick="updateHiddenCards()">Hide Cards</button>
+    </div>
+
+    <!-- Card List -->
+    <div id="card-list">
+      <!-- Filled up using generateCardList() function -->
+    </div>
+  </section>
+
+  <!-- Footer section -->
+  <section id="footer-section">
+    <footer class="text-center">
+      <div class="p-3" style="background-color: black; color: white;">
+        Made by Jimmy Le
+      </div>
+    </footer>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="cardList.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
