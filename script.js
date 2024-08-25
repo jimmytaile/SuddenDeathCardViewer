@@ -1,6 +1,7 @@
 // Global Variables
 let cardsHidden = false;
 let displayAllowed = false;
+let currentIndex = 0;
 
 // generate random display card on window load
 window.onload = randomCard();
@@ -8,75 +9,6 @@ window.onload = randomCard();
 window.onload = generateCardList();
 // print total number of cards in console
 console.log("There are " + cardList.length + " total cards.");
-
-
-
-// this function reformats a text to a standard format
-function reformatText(text) {
-  // array of special characters to replace
-  const specialChars = ["'", "-", "_", ".", "!", "?", ":", "(", ")", "[", "]", "{", "}", "\\", "|", "/", "ñ", " "];
-  // make text lowercase
-  text = text.toLowerCase();
-  // replace characters in text
-  specialChars.forEach(function(specialChar) {
-    text = text.replace("/" + specialChar + "/g", "");
-  });
-  return text;
-}
-
-// this function changes the currently displayed card into the previous one in the card list
-function prevCard() {
-  // get currently displayed card
-  let displayCard = document.getElementById("display-card");
-  let currentCard = reformatText(displayCard.alt);
-
-  // get previous card from card list
-  let prevIndex = cardList.findIndex(arr => arr.includes(currentCard)) - 1;
-  if (prevIndex < 0) {
-    prevIndex = cardList.length - 1;
-  }
-  newSrc = "images/cards/" + cardList[prevIndex][0] + ".png";
-
-  // update displayed card
-  displayCard.src = newSrc;
-  displayCard.alt = cardList[prevIndex][1];
-}
-
-// this function changes the currently displayed card into a random different one
-function randomCard() {
-  // get currently displayed card
-  let displayCard = document.getElementById("display-card");
-  let currentSrc = displayCard.src;
-  let randomNum, newSrc;
-
-  // get random card from card list until the currently displayed card and new card don't match
-  do {
-    randomNum = Math.floor(Math.random() * cardList.length);
-    newSrc = "images/cards/" + cardList[randomNum][0] + ".png";
-  } while (currentSrc === newSrc);
-
-  // update displayed card
-  displayCard.src = newSrc;
-  displayCard.alt = cardList[randomNum][1];
-}
-
-// this function changes the currently displayed card into the previous one in the card list
-function nextCard() {
-  // get currently displayed card
-  let displayCard = document.getElementById("display-card");
-  let currentCard = reformatText(displayCard.alt);
-
-  // get next card from card list
-  let nextIndex = cardList.findIndex(arr => arr.includes(currentCard)) + 1;
-  if (nextIndex >= cardList.length) {
-    nextIndex = 0;
-  }
-  newSrc = "images/cards/" + cardList[nextIndex][0] + ".png";
-
-  // update displayed card
-  displayCard.src = newSrc;
-  displayCard.alt = cardList[nextIndex][1];
-}
 
 // this function generates the complete list of cards into the browser
 function generateCardList() {
@@ -102,6 +34,88 @@ function generateCardList() {
   displayAllowed = true;
 }
 
+// this function makes all hidden cards visible or invisible
+function hideCards() {
+  let hiddenCardList = document.getElementsByClassName("card hidden");
+  for (let i = 0; i < hiddenCardList.length; i++) {
+    hiddenCardList[i].classList.toggle("visible");
+  }
+}
+
+// this function changes the currently displayed card into the previous one in the card list
+function nextCard() {
+  // get currently displayed card
+  let displayCard = document.getElementById("display-card");
+
+  // get next card from card list
+  currentIndex = currentIndex + 1;
+  if (currentIndex >= cardList.length) {
+    currentIndex = 0;
+  }
+  newSrc = "images/cards/" + cardList[currentIndex][0] + ".png";
+
+  // update displayed card
+  displayCard.src = newSrc;
+  displayCard.alt = cardList[currentIndex][1];
+}
+
+// this function changes the currently displayed card into the previous one in the card list
+function prevCard() {
+  // get currently displayed card
+  let displayCard = document.getElementById("display-card");
+
+  // get previous card from card list
+  currentIndex = currentIndex - 1;
+  if (currentIndex < 0) {
+    currentIndex = cardList.length - 1;
+  }
+  newSrc = "images/cards/" + cardList[currentIndex][0] + ".png";
+
+  // update displayed card
+  displayCard.src = newSrc;
+  displayCard.alt = cardList[currentIndex][1];
+}
+
+// this function changes the currently displayed card into a random different one
+function randomCard() {
+  // get currently displayed card
+  let displayCard = document.getElementById("display-card");
+  let currentSrc = displayCard.src;
+  let randomNum, newSrc;
+
+  // get random card from card list until the currently displayed card and new card don't match
+  do {
+    randomNum = Math.floor(Math.random() * cardList.length);
+    newSrc = "images/cards/" + cardList[randomNum][0] + ".png";
+  } while (currentSrc === newSrc);
+
+  // update displayed card
+  displayCard.src = newSrc;
+  displayCard.alt = cardList[randomNum][1];
+  currentIndex = randomNum;
+}
+
+// this function reformats a text to a standard format
+function reformatText(text) {
+  // array of special characters to replace
+  const blankChars = ["'", ".", "!", "?", ":", "(", ")", "[", "]", "{", "}", "|", "/", " "];
+  const dashChars = ["-", " "];
+
+  // make text lowercase", 
+  text = text.toLowerCase();
+
+  // replace characters in text
+  text = text.replace("/ñ/g", "n");
+  blankChars.forEach(function(char) {
+    text = text.replace("/" + char + "/g", "");
+  });
+  dashChars.forEach(function(char) {
+    text = text.replace("/" + char + "/g", "_");
+  });
+
+  return text;
+}
+
 // this function displays cards matching the input of the search bar and hides the rest
 function searchCard() {
   // get search input
@@ -124,14 +138,6 @@ function searchCard() {
         currentCard.className = "card hidden visible";
       }
     }
-  }
-}
-
-// this function makes all hidden cards visible or invisible
-function hideCards() {
-  let hiddenCardList = document.getElementsByClassName("card hidden");
-  for (let i = 0; i < hiddenCardList.length; i++) {
-    hiddenCardList[i].classList.toggle("visible");
   }
 }
 
@@ -165,6 +171,7 @@ function viewCard() {
   let src = "images/cards/" + this.id + ".png";
   displayCard.src = src;
   displayCard.alt = this.alt;
+  currentIndex = cardList.findIndex(array => array[0] === this.id);
 
   // scroll to top of the page
   window.scrollTo(0, 0);
