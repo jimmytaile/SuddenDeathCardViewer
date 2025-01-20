@@ -14,7 +14,7 @@ const cardList = new Array(
   ["ignore", "Ignore", "Ability", "Blinker"],
   ["imitation_ooze", "Imitation Ooze", "Ability", "Phobos"],
   ["immortal_body", "Immortal Body", "Ability", "Thysia"],
-  ["investigate", "Investigate", "Ability", "Choizao"],
+  ["investigate", "Investigate", "Ability", "Detective Dark"],
   ["life_swap", "Life Swap", "Ability", "Isabelle"],
   ["mass_pickle_doomsday_ray", "Mass Pickle Doomsday Ray", "Ability", "Geevil"],
   ["midas_touch", "Midas Touch", "Ability", "Quincy"],
