@@ -34,6 +34,7 @@ const cardList = new Array(
   ["xenocide", "Xenocide", "Ability", "Sniffer"],
   ["yobbin_time", "Yobbin' Time", "Ability", "Woozy"],
   // Deck Cards
+  ["9_story_massacre", "Lollipop Bash", "Event", ""],
   ["10_10_mediocrity", "10/10 Mediocrity", "Event", "Paper"],
   ["afterschool_cult_meeting", "Afterschool Cult Meeting", "Event", ""],
   ["anaheim_pepper", "Anaheim Pepper", "Event", "Pepper"],
@@ -108,7 +109,6 @@ const cardList = new Array(
   ["leper", "Leper", "Event", ""],
   ["life_bloom", "Life Bloom", "Event", ""],
   ["liquid_wish", "Liquid Wish", "Event", ""],
-  ["lollipop_bash", "Lollipop Bash", "Event", ""],
   ["marcidus_curse", "Marcidus Curse", "Event", ""],
   ["martian_blitz", "Martian Blitz", "Event", ""],
   ["masticate", "Masticate", "Event", ""],
