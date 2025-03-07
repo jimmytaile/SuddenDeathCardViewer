@@ -88,7 +88,7 @@ const cardList = new Array(
   ["erased", "Erased", "Event", ""],
   ["expel_evil", "Expel Evil", "Event", ""],
   ["faceless_shambles", "Faceless Shambles", "Event", ""],
-  ["floridian_doorway", "Floridian Doorway", "Event", ""],
+  ["floradian_doorway", "Floradian Doorway", "Event", ""],
   ["fortune_cookie", "Fortune Cookie", "Event", ""],
   ["funny_sunny_day", "Funny Sunny Day", "Event", ""],
   ["furcifer", "Furcifer", "Event", ""],
