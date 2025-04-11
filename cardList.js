@@ -210,6 +210,7 @@ const cardList = new Array(
   ["chocolate", "Chocolate!!!", "Event", ""],
   ["deny_invitation", "Deny Invitation", "Event", ""],
   ["devastation", "Devastation", "Event", ""],
+  ["drowsiness", "Drowsiness", "Item", ""],
   ["emotional_pain", "Emotional Pain", "Event", ""],
   ["exsanguination", "Exsanguination", "Event", ""],
   ["fame", "Fame", "Event", ""],
