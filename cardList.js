@@ -200,7 +200,7 @@ const cardList = new Array(
   ["sniffer_mask", "Sniffer Mask", "Item", "Mask"],
   ["strange_totem", "Strange Totem", "Item", ""],
   // Tokens
-  ["2_gold", "+2 Gold", "Event", ""],
+  ["_plus_2_gold", "+2 Gold", "Event", ""],
   ["accept_invitation", "Accept Invitation", "Event", ""],
   ["acidification", "Acidification", "Event", ""],
   ["argyria_spoon", "Argyria Spoon", "Event", ""],
