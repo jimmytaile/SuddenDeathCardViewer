@@ -54,6 +54,7 @@ const cardList = new Array(
   ["black_market_medicine", "Black Market Medicine", "Event", ""],
   ["blasphemy", "Blasphemy", "Event", ""],
   ["bloated_horror", "Bloated Horror", "Event", ""],
+  ["blue_paper", "Blue Paper", "Event", "Paper"],
   ["boodle_bag", "Boodle Bag", "Event", ""],
   ["boom", "BOOM!", "Event", ""],
   ["bottom_feeder", "Bottom Feeder", "Event", ""],
@@ -144,6 +145,7 @@ const cardList = new Array(
   ["purgation_parade", "Purgation Parade", "Event", ""],
   ["purple_pity_party", "Purple Pity Party", "Event", ""],
   ["red_light", "Red Light", "Event", ""],
+  ["red_paper", "Red Paper", "Event", "Paper"],
   ["redemption_chains", "Redemption Chains", "Event", ""],
   ["sad_mans_woes", "Sad Man's Woes", "Event", ""],
   ["secret_soup", "Secret Soup", "Event", ""],
@@ -170,6 +172,7 @@ const cardList = new Array(
   ["wax_pepper", "Wax Pepper", "Event", "Pepper"],
   ["white_panoply", "White Panoply", "Event", ""],
   ["yellow_light", "Yellow Light", "Event", ""],
+  ["yellow_paper", "Yellow Paper", "Event", "Paper"],
   ["zero_degree_murder", "Zero-Degree Murder", "Event", ""],
   // Items
   ["asternsolid_shell", "Asternsolid Shell", "Item", ""],
@@ -205,7 +208,6 @@ const cardList = new Array(
   ["acidification", "Acidification", "Event", ""],
   ["argyria_spoon", "Argyria Spoon", "Event", ""],
   ["bbs_help", "B.B.'s Help'", "Event", ""],
-  ["blue_paper", "Blue Paper", "Event", "Paper"],
   ["both_kinda_pain", "Both Kinda Pain", "Event", ""],
   ["chocolate", "Chocolate!!!", "Event", ""],
   ["deny_invitation", "Deny Invitation", "Event", ""],
@@ -230,7 +232,6 @@ const cardList = new Array(
   ["physical_pain", "Physical Pain", "Event", ""],
   ["pinkys_help", "Pinky's Help", "Event", ""],
   ["purple_paper", "Purple Paper", "Event", "Paper"],
-  ["red_paper", "Red Paper", "Event", "Paper"],
   ["strangled", "Strangled", "Event", ""],
   ["swine_fork", "Swine Fork", "Event", ""],
   ["useless_gold_1", "Useless Gold", "Event", ""],
@@ -244,6 +245,5 @@ const cardList = new Array(
   ["useless_gold_9", "Useless Gold", "Event", ""],
   ["useless_gold_10", "Useless Gold", "Event", ""],
   ["useless_gold_11", "Useless Gold", "Event", ""],
-  ["useless_gold_12", "Useless Gold", "Event", ""],
-  ["yellow_paper", "Yellow Paper", "Event", "Paper"]
+  ["useless_gold_12", "Useless Gold", "Event", ""]
 );
