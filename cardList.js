@@ -37,6 +37,7 @@ const cardList = new Array(
   ["xenocide", "Xenocide", "Ability", "Sniffer"],
   ["yobbin_time", "Yobbin' Time", "Ability", "Woozy"],
   // Deck Cards
+  ["2_15_dropoff", "2:15 Dropoff", "Event", ""],
   ["9_story_massacre", "Lollipop Bash", "Event", ""],
   ["10_10_mediocrity", "10/10 Mediocrity", "Event", "Paper"],
   ["afterschool_cult_meeting", "Afterschool Cult Meeting", "Event", ""],
@@ -180,6 +181,7 @@ const cardList = new Array(
   // Items
   ["asternsolid_shell", "Asternsolid Shell", "Item", ""],
   ["backup_milk_carton", "Backup Milk Carton", "Item", ""],
+  ["banchou_bodysuit", "Banchou Bodysuit", "Item", ""],
   ["blood_wine", "Blood Wine", "Item", ""],
   ["capsaicin_core", "Capsaicin Core", "Item", ""],
   ["chatty", "Chatty", "Item", ""],
