@@ -186,6 +186,7 @@ const cardList = new Array(
   ["blood_wine", "Blood Wine", "Item", ""],
   ["capsaicin_core", "Capsaicin Core", "Item", ""],
   ["chatty", "Chatty", "Item", ""],
+  ["chronas_head", "Chrona's Head", "Item", ""],
   ["clown_cola", "Clown Cola", "Item", ""],
   ["detached_hand", "Detached Hand", "Item", ""],
   ["eidolon_elixir", "Eidolon Elixir", "Item", ""],
