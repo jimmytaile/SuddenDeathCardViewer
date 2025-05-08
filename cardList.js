@@ -151,6 +151,7 @@ const cardList = new Array(
   ["redemption_chains", "Redemption Chains", "Event", ""],
   ["sad_mans_woes", "Sad Man's Woes", "Event", ""],
   ["secret_soup", "Secret Soup", "Event", ""],
+  ["self_voodooism", "Self-Voodooism", "Event", ""],
   ["serrano_pepper", "Serrano Pepper", "Event", "Pepper"],
   ["shady_alleyway", "Shady Alleyway", "Event", ""],
   ["short_fuse", "Short Fuse", "Event", ""],
