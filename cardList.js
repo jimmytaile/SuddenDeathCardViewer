@@ -209,6 +209,7 @@ const cardList = new Array(
   ["remote_control", "Remote Control", "Item", ""],
   ["sniffer_mask", "Sniffer Mask", "Item", "Mask"],
   ["strange_totem", "Strange Totem", "Item", ""],
+  ["traffic_knights_head", "Traffic Knight's Head", "Item", ""],
   // Tokens
   ["_plus_2_gold", "+2 Gold", "Event", ""],
   ["accept_invitation", "Accept Invitation", "Event", ""],
