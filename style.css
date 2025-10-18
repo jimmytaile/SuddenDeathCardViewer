@@ -132,13 +132,13 @@ button:active {
   margin: 10px 5px;
   z-index: 0;
 
-  transition-duration: .5s;
+  transition-duration: .4s;
 }
 
 .card:hover {
   cursor: pointer;
   z-index: 1;
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.5) rotate(4deg);
   opacity: 1;
 }
 
